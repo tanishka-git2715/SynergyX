@@ -78,7 +78,7 @@ const HomePage = () => {
             className="space-y-8"
           >
             <Badge className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 text-sm font-semibold">
-              🚀 The Future of Gen Z Learning & Work
+              The Future of Gen Z Learning & Work
             </Badge>
             
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
