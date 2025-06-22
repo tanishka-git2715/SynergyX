@@ -64,3 +64,4 @@ The project is live and hosted on **Netlify**:
 🔗 [https://synergyx.netlify.app/](https://synergyx.netlify.app/)
 
 ---
+Test
