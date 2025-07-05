@@ -1,6 +1,7 @@
 # SynergyX — Learn. Work. Collaborate. All in One Place.
 
 SynergyX is a full-stack Gen Z-first platform that empowers users to learn high-demand skills, apply them through real gigs, and collaborate with like-minded communities — all in a smart, gamified ecosystem.
+
 ---
 
 ## Tech Stack
