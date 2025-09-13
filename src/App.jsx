@@ -9,6 +9,9 @@ import WorkPlatformPage from '@/pages/WorkPlatformPage';
 import ClubsPage from '@/pages/ClubsPage';
 import EventsPage from '@/pages/EventsPage';
 import MentorshipPage from '@/pages/MentorshipPage';
+import SignupIndex from '@/pages/signup/index';
+import SignupUpload from '@/pages/signup/upload';
+import SignupReview from '@/pages/signup/review';
 import { supabase } from '@/lib/supabaseClient';
 import { AuthProvider } from '@/contexts/AuthContext';
 
@@ -44,6 +47,9 @@ function App() {
               <Route path="/clubs" element={<ClubsPage />} />
               <Route path="/events" element={<EventsPage />} />
               <Route path="/mentorship" element={<MentorshipPage />} />
+              <Route path="/signup" element={<SignupIndex />} />
+              <Route path="/signup/upload" element={<SignupUpload />} />
+              <Route path="/signup/review" element={<SignupReview />} />
             </Routes>
           </main>
           <Toaster />

@@ -1,0 +1,547 @@
+[debug] [2025-06-26T15:32:10.689Z] ----------------------------------------------------------------------
+[debug] [2025-06-26T15:32:10.692Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\tashu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2025-06-26T15:32:10.693Z] CLI Version:   14.8.0
+[debug] [2025-06-26T15:32:10.693Z] Platform:      win32
+[debug] [2025-06-26T15:32:10.693Z] Node Version:  v22.16.0
+[debug] [2025-06-26T15:32:10.693Z] Time:          Thu Jun 26 2025 21:02:10 GMT+0530 (India Standard Time)
+[debug] [2025-06-26T15:32:10.693Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-26T15:32:10.917Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-26T15:32:10.917Z] > authorizing via signed-in user (synergyxhub@gmail.com)
+[debug] [2025-06-26T15:32:10.917Z] [iam] checking project synergyx-hub for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2025-06-26T15:32:10.918Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:32:10.918Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:32:10.919Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions [none]
+[debug] [2025-06-26T15:32:10.919Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions x-goog-quota-user=projects/synergyx-hub
+[debug] [2025-06-26T15:32:10.919Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-06-26T15:32:12.427Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions 200
+[debug] [2025-06-26T15:32:12.428Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-06-26T15:32:12.428Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:32:12.428Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:32:12.428Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/synergyx-hub/serviceAccounts/synergyx-hub@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2025-06-26T15:32:12.428Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/synergyx-hub/serviceAccounts/synergyx-hub@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2025-06-26T15:32:14.202Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/synergyx-hub/serviceAccounts/synergyx-hub@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2025-06-26T15:32:14.202Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/synergyx-hub/serviceAccounts/synergyx-hub@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'synergyx-hub'...
+[info] 
+[info] i  deploying functions 
+[debug] [2025-06-26T15:32:14.208Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:32:14.208Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:32:14.209Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub [none]
+[debug] [2025-06-26T15:32:14.567Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub 200
+[debug] [2025-06-26T15:32:14.567Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub {"projectNumber":"922102669164","projectId":"synergyx-hub","lifecycleState":"ACTIVE","name":"SynergyX-Hub","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-06-26T14:42:36.132084Z"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2025-06-26T15:32:14.572Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:32:14.572Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:32:14.572Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/synergyx-hub/adminSdkConfig [none]
+[debug] [2025-06-26T15:32:15.134Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/synergyx-hub/adminSdkConfig 200
+[debug] [2025-06-26T15:32:15.135Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/synergyx-hub/adminSdkConfig {"projectId":"synergyx-hub","storageBucket":"synergyx-hub.firebasestorage.app"}
+[debug] [2025-06-26T15:32:15.135Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:32:15.135Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:32:15.135Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/synergyx-hub/configs [none]
+[debug] [2025-06-26T15:32:15.549Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/synergyx-hub/configs 200
+[debug] [2025-06-26T15:32:15.549Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/synergyx-hub/configs {}
+[debug] [2025-06-26T15:32:15.551Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2025-06-26T15:32:17.749Z] > [functions] package.json contents: {
+  "name": "synergyx-functions",
+  "description": "Firebase Cloud Functions for SynergyX user onboarding and profile generation.",
+  "version": "1.0.0",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.10.1",
+    "firebase-functions": "^4.4.1",
+    "multer": "^1.4.5-lts.1",
+    "pdf-parse": "^1.1.1",
+    "docx": "^8.0.3",
+    "axios": "^1.6.7",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-06-26T15:32:17.749Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[info] i  functions: You are using a version of firebase-functions SDK (4.9.0) that does not have support for the newest Firebase Extensions features. Please update firebase-functions SDK to >=5.1.0 to use them correctly 
+[debug] [2025-06-26T15:32:17.752Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-06-26T15:32:17.768Z] Found firebase-functions binary at 'C:\Users\tashu\OneDrive\Stuff\Work\SynergyX\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8938
+
+[debug] [2025-06-26T15:32:19.087Z] Got response from /__/functions.yaml {"endpoints":{"joinSynergyX":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"joinSynergyX"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged C:\Users\tashu\OneDrive\Stuff\Work\SynergyX\functions (78.35 KB) for uploading 
+[debug] [2025-06-26T15:32:23.330Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:32:23.331Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:32:23.332Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/synergyx-hub/locations/-/functions [none]
+[debug] [2025-06-26T15:32:24.170Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/synergyx-hub/locations/-/functions 200
+[debug] [2025-06-26T15:32:24.170Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/synergyx-hub/locations/-/functions {}
+[debug] [2025-06-26T15:32:24.171Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:32:24.171Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:32:24.171Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/synergyx-hub/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2025-06-26T15:32:25.776Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/synergyx-hub/locations/-/functions 200
+[debug] [2025-06-26T15:32:25.776Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/synergyx-hub/locations/-/functions {}
+[debug] [2025-06-26T15:32:25.780Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:32:25.780Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:32:25.780Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub [none]
+[debug] [2025-06-26T15:32:27.321Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub 200
+[debug] [2025-06-26T15:32:27.321Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub {"projectNumber":"922102669164","projectId":"synergyx-hub","lifecycleState":"ACTIVE","name":"SynergyX-Hub","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-06-26T14:42:36.132084Z"}
+[debug] [2025-06-26T15:32:27.323Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2025-06-26T15:32:27.323Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:32:27.323Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:32:27.323Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions [none]
+[debug] [2025-06-26T15:32:27.323Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions x-goog-quota-user=projects/synergyx-hub
+[debug] [2025-06-26T15:32:27.323Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2025-06-26T15:32:27.606Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions 200
+[debug] [2025-06-26T15:32:27.607Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2025-06-26T15:32:27.607Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2025-06-26T15:32:27.608Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:32:27.608Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:32:27.608Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/synergyx-hub/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2025-06-26T15:32:27.608Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/synergyx-hub/locations/us-central1/functions:generateUploadUrl {}
+[debug] [2025-06-26T15:32:37.494Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/synergyx-hub/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2025-06-26T15:32:37.494Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/synergyx-hub/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/uploads-290813904134.us-central1.cloudfunctions.appspot.com/bbcfec60-d552-4b78-a786-fb4c7da3360e.zip?GoogleAccessId=service-922102669164@gcf-admin-robot.iam.gserviceaccount.com&Expires=1750953757&Signature=sd0lWp2osZj%2BWQheb%2FxFTypg9IVwlAQh%2FFT0aPwr5I5X0JkvznJoLrY%2BfpVG9k1pbUOD23jSwb9OelOkfWQRVr40EQv44MiKdo662BhjDwOSVUn74riEky%2BHK8MiWnCIW2D1PwNCVU6stPJN6vw6WZmhkErLXqh9gvebaQwVbAndO3%2FRGn6YSgyfLTqaHvQfO%2BK5pSBrmLWkwSENM4L45PhAVAeC%2BYP5ETLOlzW%2FTMTvSWn7fbkNx6seSeUmQmEmmDejLqC90bQwgZWzIo7e7cSkG4BRdKLJ28vksB9OYoYWY7AeJlcpXBEdRZCOlx7bH1d8lUeC28R6gg9NwDk6eA%3D%3D"}
+[debug] [2025-06-26T15:32:37.495Z] >>> [apiv2][query] PUT https://storage.googleapis.com/uploads-290813904134.us-central1.cloudfunctions.appspot.com/bbcfec60-d552-4b78-a786-fb4c7da3360e.zip GoogleAccessId=service-922102669164%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1750953757&Signature=sd0lWp2osZj%2BWQheb%2FxFTypg9IVwlAQh%2FFT0aPwr5I5X0JkvznJoLrY%2BfpVG9k1pbUOD23jSwb9OelOkfWQRVr40EQv44MiKdo662BhjDwOSVUn74riEky%2BHK8MiWnCIW2D1PwNCVU6stPJN6vw6WZmhkErLXqh9gvebaQwVbAndO3%2FRGn6YSgyfLTqaHvQfO%2BK5pSBrmLWkwSENM4L45PhAVAeC%2BYP5ETLOlzW%2FTMTvSWn7fbkNx6seSeUmQmEmmDejLqC90bQwgZWzIo7e7cSkG4BRdKLJ28vksB9OYoYWY7AeJlcpXBEdRZCOlx7bH1d8lUeC28R6gg9NwDk6eA%3D%3D
+[debug] [2025-06-26T15:32:37.495Z] >>> [apiv2][body] PUT https://storage.googleapis.com/uploads-290813904134.us-central1.cloudfunctions.appspot.com/bbcfec60-d552-4b78-a786-fb4c7da3360e.zip [stream]
+[debug] [2025-06-26T15:32:38.674Z] <<< [apiv2][status] PUT https://storage.googleapis.com/uploads-290813904134.us-central1.cloudfunctions.appspot.com/bbcfec60-d552-4b78-a786-fb4c7da3360e.zip 200
+[debug] [2025-06-26T15:32:38.674Z] <<< [apiv2][body] PUT https://storage.googleapis.com/uploads-290813904134.us-central1.cloudfunctions.appspot.com/bbcfec60-d552-4b78-a786-fb4c7da3360e.zip [omitted]
+[info] +  functions: functions folder uploaded successfully 
+[info] i  functions: creating Node.js 20 (1st Gen) function joinSynergyX(us-central1)... 
+[debug] [2025-06-26T15:32:38.679Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:32:38.679Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:32:38.679Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/synergyx-hub/locations/us-central1/functions [none]
+[debug] [2025-06-26T15:32:38.680Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/synergyx-hub/locations/us-central1/functions {"name":"projects/synergyx-hub/locations/us-central1/functions/joinSynergyX","sourceUploadUrl":"https://storage.googleapis.com/uploads-290813904134.us-central1.cloudfunctions.appspot.com/bbcfec60-d552-4b78-a786-fb4c7da3360e.zip?GoogleAccessId=service-922102669164@gcf-admin-robot.iam.gserviceaccount.com&Expires=1750953757&Signature=sd0lWp2osZj%2BWQheb%2FxFTypg9IVwlAQh%2FFT0aPwr5I5X0JkvznJoLrY%2BfpVG9k1pbUOD23jSwb9OelOkfWQRVr40EQv44MiKdo662BhjDwOSVUn74riEky%2BHK8MiWnCIW2D1PwNCVU6stPJN6vw6WZmhkErLXqh9gvebaQwVbAndO3%2FRGn6YSgyfLTqaHvQfO%2BK5pSBrmLWkwSENM4L45PhAVAeC%2BYP5ETLOlzW%2FTMTvSWn7fbkNx6seSeUmQmEmmDejLqC90bQwgZWzIo7e7cSkG4BRdKLJ28vksB9OYoYWY7AeJlcpXBEdRZCOlx7bH1d8lUeC28R6gg9NwDk6eA%3D%3D","entryPoint":"joinSynergyX","runtime":"nodejs20","dockerRegistry":"ARTIFACT_REGISTRY","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8aa8dbfb4c2c41006984c1870fed675a90ddfae1"},"httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"minInstances":null,"maxInstances":null,"ingressSettings":null,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"synergyx-hub\",\"storageBucket\":\"synergyx-hub.firebasestorage.app\"}","GCLOUD_PROJECT":"synergyx-hub","EVENTARC_CLOUD_EVENT_SOURCE":"projects/synergyx-hub/locations/us-central1/functions/joinSynergyX"},"serviceAccountEmail":null,"availableMemoryMb":null,"timeout":null,"vpcConnector":null,"vpcConnectorEgressSettings":null,"buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}}
+[debug] [2025-06-26T15:32:40.857Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/synergyx-hub/locations/us-central1/functions 400
+[debug] [2025-06-26T15:32:40.857Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/synergyx-hub/locations/us-central1/functions {"error":{"code":400,"message":"Failed to create 1st Gen function projects/synergyx-hub/locations/us-central1/functions/joinSynergyX: Default service account '922102669164-compute@developer.gserviceaccount.com' doesn't exist. Please recreate this account or specify a different account. Please visit https://cloud.google.com/functions/docs/troubleshooting for in-depth troubleshooting documentation.","status":"FAILED_PRECONDITION"}}
+[warn] !  functions: failed to create function projects/synergyx-hub/locations/us-central1/functions/joinSynergyX 
+[error] Failed to create function projects/synergyx-hub/locations/us-central1/functions/joinSynergyX
+[debug] [2025-06-26T15:32:40.876Z] Total Function Deployment time: 2184
+[debug] [2025-06-26T15:32:40.876Z] 1 Functions Deployed
+[debug] [2025-06-26T15:32:40.876Z] 1 Functions Errored
+[debug] [2025-06-26T15:32:40.876Z] 0 Function Deployments Aborted
+[debug] [2025-06-26T15:32:40.876Z] Average Function Deployment time: 2183
+[info] 
+[info] Functions deploy had errors with the following functions:
+	joinSynergyX(us-central1)
+[debug] [2025-06-26T15:32:41.020Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[debug] [2025-06-26T15:32:41.022Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:32:41.022Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:32:41.023Z] >>> [apiv2][query] GET https://artifactregistry.googleapis.com/v1/projects/synergyx-hub/locations/us-central1/repositories/gcf-artifacts [none]
+[debug] [2025-06-26T15:32:42.408Z] <<< [apiv2][status] GET https://artifactregistry.googleapis.com/v1/projects/synergyx-hub/locations/us-central1/repositories/gcf-artifacts 404
+[debug] [2025-06-26T15:32:42.408Z] <<< [apiv2][body] GET https://artifactregistry.googleapis.com/v1/projects/synergyx-hub/locations/us-central1/repositories/gcf-artifacts {"error":{"code":404,"message":"Requested entity was not found.","status":"NOT_FOUND"}}
+[debug] [2025-06-26T15:32:42.408Z] Failed to check artifact cleanup policy for region us-central1: Request to https://artifactregistry.googleapis.com/v1/projects/synergyx-hub/locations/us-central1/repositories/gcf-artifacts had HTTP Error: 404, Requested entity was not found. {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":404,"message":"Requested entity was not found.","status":"NOT_FOUND"}},"response":{"statusCode":404}},"exit":1,"message":"Request to https://artifactregistry.googleapis.com/v1/projects/synergyx-hub/locations/us-central1/repositories/gcf-artifacts had HTTP Error: 404, Requested entity was not found.","status":404}
+[debug] [2025-06-26T15:32:42.410Z] Functions deploy failed.
+[debug] [2025-06-26T15:32:42.410Z] {
+  "endpoint": {
+    "id": "joinSynergyX",
+    "project": "synergyx-hub",
+    "region": "us-central1",
+    "entryPoint": "joinSynergyX",
+    "platform": "gcfv1",
+    "runtime": "nodejs20",
+    "httpsTrigger": {},
+    "serviceAccount": null,
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"synergyx-hub\",\"storageBucket\":\"synergyx-hub.firebasestorage.app\"}",
+      "GCLOUD_PROJECT": "synergyx-hub",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/synergyx-hub/locations/us-central1/functions/joinSynergyX"
+    },
+    "codebase": "default",
+    "targetedByOnly": false,
+    "hash": "8aa8dbfb4c2c41006984c1870fed675a90ddfae1",
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    }
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/synergyx-hub/locations/us-central1/functions/joinSynergyX"
+    },
+    "exit": 1,
+    "message": "Failed to create function projects/synergyx-hub/locations/us-central1/functions/joinSynergyX",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "Failed to create 1st Gen function projects/synergyx-hub/locations/us-central1/functions/joinSynergyX: Default service account '922102669164-compute@developer.gserviceaccount.com' doesn't exist. Please recreate this account or specify a different account. Please visit https://cloud.google.com/functions/docs/troubleshooting for in-depth troubleshooting documentation.",
+            "status": "FAILED_PRECONDITION"
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "Request to https://cloudfunctions.googleapis.com/v1/projects/synergyx-hub/locations/us-central1/functions had HTTP Error: 400, Failed to create 1st Gen function projects/synergyx-hub/locations/us-central1/functions/joinSynergyX: Default service account '922102669164-compute@developer.gserviceaccount.com' doesn't exist. Please recreate this account or specify a different account. Please visit https://cloud.google.com/functions/docs/troubleshooting for in-depth troubleshooting documentation.",
+      "status": 400
+    },
+    "status": 400,
+    "code": 400
+  }
+}
+[debug] [2025-06-26T15:32:42.494Z] Error: Failed to create function joinSynergyX in region us-central1
+    at C:\Users\tashu\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:52:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Fabricator.createV1Function (C:\Users\tashu\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:182:32)
+    at async Fabricator.createEndpoint (C:\Users\tashu\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:134:13)
+    at async handle (C:\Users\tashu\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:89:17)
+[error] 
+[error] Error: There was an error deploying functions
+[debug] [2025-06-26T15:33:19.567Z] ----------------------------------------------------------------------
+[debug] [2025-06-26T15:33:19.570Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\tashu\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2025-06-26T15:33:19.571Z] CLI Version:   14.8.0
+[debug] [2025-06-26T15:33:19.571Z] Platform:      win32
+[debug] [2025-06-26T15:33:19.571Z] Node Version:  v22.16.0
+[debug] [2025-06-26T15:33:19.571Z] Time:          Thu Jun 26 2025 21:03:19 GMT+0530 (India Standard Time)
+[debug] [2025-06-26T15:33:19.572Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-26T15:33:19.804Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-26T15:33:19.805Z] > authorizing via signed-in user (synergyxhub@gmail.com)
+[debug] [2025-06-26T15:33:19.805Z] [iam] checking project synergyx-hub for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2025-06-26T15:33:19.806Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:33:19.806Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:33:19.806Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions [none]
+[debug] [2025-06-26T15:33:19.806Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions x-goog-quota-user=projects/synergyx-hub
+[debug] [2025-06-26T15:33:19.807Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-06-26T15:33:21.294Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions 200
+[debug] [2025-06-26T15:33:21.294Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-06-26T15:33:21.294Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:33:21.294Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:33:21.294Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/synergyx-hub/serviceAccounts/synergyx-hub@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2025-06-26T15:33:21.294Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/synergyx-hub/serviceAccounts/synergyx-hub@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2025-06-26T15:33:21.720Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/synergyx-hub/serviceAccounts/synergyx-hub@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2025-06-26T15:33:21.720Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/synergyx-hub/serviceAccounts/synergyx-hub@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'synergyx-hub'...
+[info] 
+[info] i  deploying functions 
+[debug] [2025-06-26T15:33:21.728Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:33:21.728Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:33:21.729Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub [none]
+[debug] [2025-06-26T15:33:22.093Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub 200
+[debug] [2025-06-26T15:33:22.093Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub {"projectNumber":"922102669164","projectId":"synergyx-hub","lifecycleState":"ACTIVE","name":"SynergyX-Hub","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-06-26T14:42:36.132084Z"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2025-06-26T15:33:22.097Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:33:22.097Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:33:22.098Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/synergyx-hub/adminSdkConfig [none]
+[debug] [2025-06-26T15:33:22.608Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/synergyx-hub/adminSdkConfig 200
+[debug] [2025-06-26T15:33:22.608Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/synergyx-hub/adminSdkConfig {"projectId":"synergyx-hub","storageBucket":"synergyx-hub.firebasestorage.app"}
+[debug] [2025-06-26T15:33:22.608Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:33:22.609Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:33:22.609Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/synergyx-hub/configs [none]
+[debug] [2025-06-26T15:33:23.014Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/synergyx-hub/configs 200
+[debug] [2025-06-26T15:33:23.014Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/synergyx-hub/configs {}
+[debug] [2025-06-26T15:33:23.016Z] Validating nodejs source
+[debug] [2025-06-26T15:33:28.641Z] > [functions] package.json contents: {
+  "name": "synergyx-functions",
+  "description": "Firebase Cloud Functions for SynergyX user onboarding and profile generation.",
+  "version": "1.0.0",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "cors": "^2.8.5",
+    "docx": "^8.0.3",
+    "firebase-admin": "^11.10.1",
+    "firebase-functions": "^6.3.2",
+    "multer": "^1.4.5-lts.1",
+    "pdf-parse": "^1.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2025-06-26T15:33:28.642Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2025-06-26T15:33:28.963Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-06-26T15:33:29.565Z] Found firebase-functions binary at 'C:\Users\tashu\OneDrive\Stuff\Work\SynergyX\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8559
+
+[debug] [2025-06-26T15:33:37.446Z] Got response from /__/functions.yaml {"endpoints":{"joinSynergyX":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"joinSynergyX"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2025-06-26T15:33:41.750Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:33:41.750Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:33:41.751Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/synergyx-hub/services/firebaseextensions.googleapis.com [none]
+[debug] [2025-06-26T15:33:41.751Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/synergyx-hub/services/firebaseextensions.googleapis.com x-goog-quota-user=projects/synergyx-hub
+[debug] [2025-06-26T15:33:43.602Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/synergyx-hub/services/firebaseextensions.googleapis.com 200
+[debug] [2025-06-26T15:33:43.603Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/synergyx-hub/services/firebaseextensions.googleapis.com [omitted]
+[warn] !  extensions: missing required API firebaseextensions.googleapis.com. Enabling now... 
+[debug] [2025-06-26T15:33:43.604Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:33:43.604Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:33:43.605Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/synergyx-hub/services/firebaseextensions.googleapis.com:enable [none]
+[debug] [2025-06-26T15:33:43.605Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/synergyx-hub/services/firebaseextensions.googleapis.com:enable x-goog-quota-user=projects/synergyx-hub
+[debug] [2025-06-26T15:33:44.213Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/synergyx-hub/services/firebaseextensions.googleapis.com:enable 200
+[debug] [2025-06-26T15:33:44.213Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/synergyx-hub/services/firebaseextensions.googleapis.com:enable [omitted]
+[debug] [2025-06-26T15:33:54.243Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-26T15:33:54.244Z] > authorizing via signed-in user (synergyxhub@gmail.com)
+[debug] [2025-06-26T15:33:54.244Z] [iam] checking project synergyx-hub for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2025-06-26T15:33:54.244Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:33:54.244Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:33:54.244Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions [none]
+[debug] [2025-06-26T15:33:54.244Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions x-goog-quota-user=projects/synergyx-hub
+[debug] [2025-06-26T15:33:54.244Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2025-06-26T15:33:55.781Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions 200
+[debug] [2025-06-26T15:33:55.781Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2025-06-26T15:33:55.782Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:33:55.782Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:33:55.782Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/synergyx-hub/instances pageSize=100&pageToken=
+[debug] [2025-06-26T15:33:59.778Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/synergyx-hub/instances 200
+[debug] [2025-06-26T15:33:59.778Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/synergyx-hub/instances {}
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged C:\Users\tashu\OneDrive\Stuff\Work\SynergyX\functions (77.83 KB) for uploading 
+[debug] [2025-06-26T15:33:59.830Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:33:59.830Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:33:59.831Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/synergyx-hub/locations/-/functions [none]
+[debug] [2025-06-26T15:34:00.717Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/synergyx-hub/locations/-/functions 200
+[debug] [2025-06-26T15:34:00.718Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/synergyx-hub/locations/-/functions {}
+[debug] [2025-06-26T15:34:00.720Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:00.720Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:00.721Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/synergyx-hub/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2025-06-26T15:34:02.439Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/synergyx-hub/locations/-/functions 200
+[debug] [2025-06-26T15:34:02.439Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/synergyx-hub/locations/-/functions {}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[debug] [2025-06-26T15:34:02.443Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:02.443Z] Checked if tokens are valid: true, expires at: 1750954797180
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[debug] [2025-06-26T15:34:02.444Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:02.444Z] Checked if tokens are valid: true, expires at: 1750954797180
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[debug] [2025-06-26T15:34:02.445Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:02.445Z] Checked if tokens are valid: true, expires at: 1750954797180
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2025-06-26T15:34:02.448Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:02.449Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:02.449Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/922102669164/services/run.googleapis.com [none]
+[debug] [2025-06-26T15:34:02.449Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/922102669164/services/run.googleapis.com x-goog-quota-user=projects/922102669164
+[debug] [2025-06-26T15:34:02.455Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/922102669164/services/eventarc.googleapis.com [none]
+[debug] [2025-06-26T15:34:02.455Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/922102669164/services/eventarc.googleapis.com x-goog-quota-user=projects/922102669164
+[debug] [2025-06-26T15:34:02.459Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/922102669164/services/pubsub.googleapis.com [none]
+[debug] [2025-06-26T15:34:02.459Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/922102669164/services/pubsub.googleapis.com x-goog-quota-user=projects/922102669164
+[debug] [2025-06-26T15:34:02.465Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/922102669164/services/storage.googleapis.com [none]
+[debug] [2025-06-26T15:34:02.471Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/922102669164/services/storage.googleapis.com x-goog-quota-user=projects/922102669164
+[debug] [2025-06-26T15:34:04.345Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/922102669164/services/eventarc.googleapis.com 200
+[debug] [2025-06-26T15:34:04.440Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/922102669164/services/eventarc.googleapis.com [omitted]
+[warn] !  functions: missing required API eventarc.googleapis.com. Enabling now... 
+[debug] [2025-06-26T15:34:04.616Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:04.617Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:04.617Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/922102669164/services/eventarc.googleapis.com:enable [none]
+[debug] [2025-06-26T15:34:04.617Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/922102669164/services/eventarc.googleapis.com:enable x-goog-quota-user=projects/922102669164
+[debug] [2025-06-26T15:34:04.621Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/922102669164/services/pubsub.googleapis.com 200
+[debug] [2025-06-26T15:34:04.625Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/922102669164/services/pubsub.googleapis.com [omitted]
+[info] +  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2025-06-26T15:34:04.774Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/922102669164/services/storage.googleapis.com 200
+[debug] [2025-06-26T15:34:04.774Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/922102669164/services/storage.googleapis.com [omitted]
+[info] +  functions: required API storage.googleapis.com is enabled 
+[debug] [2025-06-26T15:34:04.934Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/922102669164/services/run.googleapis.com 200
+[debug] [2025-06-26T15:34:04.934Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/922102669164/services/run.googleapis.com [omitted]
+[warn] !  functions: missing required API run.googleapis.com. Enabling now... 
+[debug] [2025-06-26T15:34:04.936Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:04.937Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:04.937Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/922102669164/services/run.googleapis.com:enable [none]
+[debug] [2025-06-26T15:34:04.937Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/922102669164/services/run.googleapis.com:enable x-goog-quota-user=projects/922102669164
+[debug] [2025-06-26T15:34:05.172Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/922102669164/services/eventarc.googleapis.com:enable 200
+[debug] [2025-06-26T15:34:05.172Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/922102669164/services/eventarc.googleapis.com:enable [omitted]
+[debug] [2025-06-26T15:34:06.230Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/922102669164/services/run.googleapis.com:enable 200
+[debug] [2025-06-26T15:34:06.230Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/922102669164/services/run.googleapis.com:enable [omitted]
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[debug] [2025-06-26T15:34:16.450Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:16.450Z] Checked if tokens are valid: true, expires at: 1750954797180
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2025-06-26T15:34:16.620Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:16.620Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:16.621Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/922102669164/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2025-06-26T15:34:16.621Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1beta1/projects/922102669164/services/pubsub.googleapis.com:generateServiceIdentity x-goog-quota-user=projects/922102669164
+[debug] [2025-06-26T15:34:16.621Z] >>> [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/922102669164/services/pubsub.googleapis.com:generateServiceIdentity {}
+[debug] [2025-06-26T15:34:16.764Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/922102669164/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2025-06-26T15:34:16.764Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1beta1/projects/922102669164/services/eventarc.googleapis.com:generateServiceIdentity x-goog-quota-user=projects/922102669164
+[debug] [2025-06-26T15:34:16.764Z] >>> [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/922102669164/services/eventarc.googleapis.com:generateServiceIdentity {}
+[debug] [2025-06-26T15:34:18.840Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/922102669164/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2025-06-26T15:34:18.840Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/922102669164/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-922102669164@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"111342228062596617457"}}
+[debug] [2025-06-26T15:34:19.067Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/922102669164/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2025-06-26T15:34:19.067Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/922102669164/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-922102669164@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"111176675704302754527"}}
+[debug] [2025-06-26T15:34:19.082Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:19.083Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:19.083Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub [none]
+[debug] [2025-06-26T15:34:20.771Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub 200
+[debug] [2025-06-26T15:34:20.771Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub {"projectNumber":"922102669164","projectId":"synergyx-hub","lifecycleState":"ACTIVE","name":"SynergyX-Hub","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-06-26T14:42:36.132084Z"}
+[debug] [2025-06-26T15:34:20.783Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:20.784Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:20.784Z] >>> [apiv2][query] GET https://compute.googleapis.com/compute/v1/projects/922102669164 [none]
+[debug] [2025-06-26T15:34:22.023Z] <<< [apiv2][status] GET https://compute.googleapis.com/compute/v1/projects/922102669164 403
+[debug] [2025-06-26T15:34:22.023Z] <<< [apiv2][body] GET https://compute.googleapis.com/compute/v1/projects/922102669164 {"error":{"code":403,"message":"Compute Engine API has not been used in project 922102669164 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=922102669164 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 922102669164 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=922102669164 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=922102669164","service":"compute.googleapis.com","consumer":"projects/922102669164","containerInfo":"922102669164","serviceTitle":"Compute Engine API"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 922102669164 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=922102669164 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=922102669164"}]}]}}
+[debug] [2025-06-26T15:34:22.025Z] unable to look up default compute service account. Falling back to 922102669164-compute@developer.gserviceaccount.com. Error: {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":403,"message":"Compute Engine API has not been used in project 922102669164 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=922102669164 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 922102669164 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=922102669164 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=922102669164","service":"compute.googleapis.com","consumer":"projects/922102669164","containerInfo":"922102669164","serviceTitle":"Compute Engine API"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 922102669164 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=922102669164 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=922102669164"}]}]}},"response":{"statusCode":403}},"exit":1,"message":"Request to https://compute.googleapis.com/compute/v1/projects/922102669164 had HTTP Error: 403, Compute Engine API has not been used in project 922102669164 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=922102669164 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":403}
+[debug] [2025-06-26T15:34:22.036Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:22.036Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:22.037Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/synergyx-hub/billingInfo [none]
+[debug] [2025-06-26T15:34:23.638Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/synergyx-hub/billingInfo 200
+[debug] [2025-06-26T15:34:23.638Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/synergyx-hub/billingInfo {"name":"projects/synergyx-hub/billingInfo","projectId":"synergyx-hub","billingAccountName":"billingAccounts/01AE1D-135B1E-278144","billingEnabled":true}
+[debug] [2025-06-26T15:34:23.642Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2025-06-26T15:34:23.642Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:23.643Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:23.643Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions [none]
+[debug] [2025-06-26T15:34:23.643Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions x-goog-quota-user=projects/synergyx-hub
+[debug] [2025-06-26T15:34:23.644Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2025-06-26T15:34:23.936Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions 200
+[debug] [2025-06-26T15:34:23.936Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/synergyx-hub:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2025-06-26T15:34:23.937Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2025-06-26T15:34:23.938Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:23.938Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:23.938Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/synergyx-hub/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2025-06-26T15:34:26.041Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/synergyx-hub/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2025-06-26T15:34:26.055Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/synergyx-hub/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-922102669164.us-central1.cloudfunctions.appspot.com/ef220e9c-fc69-44bd-a176-be6ebb1b5608.zip?GoogleAccessId=service-922102669164@gcf-admin-robot.iam.gserviceaccount.com&Expires=1750953866&Signature=hDhX0WdXyEc89caqxhGQ4kS2wYEBAT12igN74QPf2uFn3pzhodQt9WeO1hPg3dBFr740BPUBBUKW8NKLRsgE1smu8HyAe7aVXAuxdGcC%2Fh37EJJHoVDbbXnkWgkppBnJU%2BByKQ%2FaiMPeZH4ufb5zCcw9DDQE9sB3sm2d6a0jZXHNYtyNOSITH0qgBx8ZMSudvQ6geL3LZ0%2BOO3FjjygPZY8kTEF5mdS9EQoVY9Q%2FUtwDg2dcaoqXIU4xdc9Nj9fzIark9G3%2FUZMBi4YBsnr0scNRU5yAZYB6T1CWboeXYbAi0gIwJUc3uOqvuzQXdz3nLnpjBL5ISZshTFYyQJTc5g%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-922102669164.us-central1.cloudfunctions.appspot.com","object":"ef220e9c-fc69-44bd-a176-be6ebb1b5608.zip"}}
+[debug] [2025-06-26T15:34:26.188Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-922102669164.us-central1.cloudfunctions.appspot.com/ef220e9c-fc69-44bd-a176-be6ebb1b5608.zip GoogleAccessId=service-922102669164%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1750953866&Signature=hDhX0WdXyEc89caqxhGQ4kS2wYEBAT12igN74QPf2uFn3pzhodQt9WeO1hPg3dBFr740BPUBBUKW8NKLRsgE1smu8HyAe7aVXAuxdGcC%2Fh37EJJHoVDbbXnkWgkppBnJU%2BByKQ%2FaiMPeZH4ufb5zCcw9DDQE9sB3sm2d6a0jZXHNYtyNOSITH0qgBx8ZMSudvQ6geL3LZ0%2BOO3FjjygPZY8kTEF5mdS9EQoVY9Q%2FUtwDg2dcaoqXIU4xdc9Nj9fzIark9G3%2FUZMBi4YBsnr0scNRU5yAZYB6T1CWboeXYbAi0gIwJUc3uOqvuzQXdz3nLnpjBL5ISZshTFYyQJTc5g%3D%3D
+[debug] [2025-06-26T15:34:26.189Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-922102669164.us-central1.cloudfunctions.appspot.com/ef220e9c-fc69-44bd-a176-be6ebb1b5608.zip [stream]
+[debug] [2025-06-26T15:34:27.746Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-922102669164.us-central1.cloudfunctions.appspot.com/ef220e9c-fc69-44bd-a176-be6ebb1b5608.zip 200
+[debug] [2025-06-26T15:34:27.746Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-922102669164.us-central1.cloudfunctions.appspot.com/ef220e9c-fc69-44bd-a176-be6ebb1b5608.zip [omitted]
+[info] +  functions: functions folder uploaded successfully 
+[info] i  functions: creating Node.js 20 (2nd Gen) function joinSynergyX(us-central1)... 
+[debug] [2025-06-26T15:34:27.774Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:27.774Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:27.774Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/synergyx-hub/locations/us-central1/functions functionId=joinSynergyX
+[debug] [2025-06-26T15:34:27.774Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/synergyx-hub/locations/us-central1/functions {"name":"projects/synergyx-hub/locations/us-central1/functions/joinSynergyX","buildConfig":{"runtime":"nodejs20","entryPoint":"joinSynergyX","source":{"storageSource":{"bucket":"gcf-v2-uploads-922102669164.us-central1.cloudfunctions.appspot.com","object":"ef220e9c-fc69-44bd-a176-be6ebb1b5608.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"synergyx-hub\",\"storageBucket\":\"synergyx-hub.firebasestorage.app\"}","GCLOUD_PROJECT":"synergyx-hub","EVENTARC_CLOUD_EVENT_SOURCE":"projects/synergyx-hub/locations/us-central1/services/joinSynergyX","FUNCTION_TARGET":"joinSynergyX","LOG_EXECUTION_ID":"true"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"6e95b1818b4df68f5f47f1519a7c441e0d129764"}}
+[debug] [2025-06-26T15:34:30.333Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/synergyx-hub/locations/us-central1/functions 200
+[debug] [2025-06-26T15:34:30.333Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/synergyx-hub/locations/us-central1/functions {"name":"projects/synergyx-hub/locations/us-central1/operations/operation-1750952069332-6387b4c1c7f8c-1dca187f-a4eff308","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-06-26T15:34:30.403922265Z","target":"projects/synergyx-hub/locations/us-central1/functions/joinSynergyX","verb":"create","cancelRequested":false,"apiVersion":"v2"},"done":false}
+[debug] [2025-06-26T15:34:30.349Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:30.350Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:30.366Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/synergyx-hub/locations/us-central1/operations/operation-1750952069332-6387b4c1c7f8c-1dca187f-a4eff308 [none]
+[debug] [2025-06-26T15:34:31.750Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/synergyx-hub/locations/us-central1/operations/operation-1750952069332-6387b4c1c7f8c-1dca187f-a4eff308 200
+[debug] [2025-06-26T15:34:31.751Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/synergyx-hub/locations/us-central1/operations/operation-1750952069332-6387b4c1c7f8c-1dca187f-a4eff308 {"name":"projects/synergyx-hub/locations/us-central1/operations/operation-1750952069332-6387b4c1c7f8c-1dca187f-a4eff308","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-06-26T15:34:30.403922265Z","target":"projects/synergyx-hub/locations/us-central1/functions/joinSynergyX","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/synergyx-hub/locations/us-central1/functions/joinSynergyX","buildConfig":{"runtime":"nodejs20","entryPoint":"joinSynergyX","source":{"storageSource":{"bucket":"gcf-v2-sources-922102669164-us-central1","object":"joinSynergyX/function-source.zip","generation":"1750952070064116"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/synergyx-hub/serviceAccounts/922102669164-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/synergyx-hub/locations/us-central1/services/joinsynergyx","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"synergyx-hub\",\"storageBucket\":\"synergyx-hub.firebasestorage.app\"}","GCLOUD_PROJECT":"synergyx-hub","EVENTARC_CLOUD_EVENT_SOURCE":"projects/synergyx-hub/locations/us-central1/services/joinSynergyX","FUNCTION_TARGET":"joinSynergyX","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"922102669164-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"6e95b1818b4df68f5f47f1519a7c441e0d129764"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2025-06-26T15:34:32.279Z] [create-default-us-central1-joinSynergyX] Retrying task index 0
+[debug] [2025-06-26T15:34:32.285Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:32.285Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:32.292Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/synergyx-hub/locations/us-central1/operations/operation-1750952069332-6387b4c1c7f8c-1dca187f-a4eff308 [none]
+[debug] [2025-06-26T15:34:33.702Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/synergyx-hub/locations/us-central1/operations/operation-1750952069332-6387b4c1c7f8c-1dca187f-a4eff308 200
+[debug] [2025-06-26T15:34:33.744Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/synergyx-hub/locations/us-central1/operations/operation-1750952069332-6387b4c1c7f8c-1dca187f-a4eff308 {"name":"projects/synergyx-hub/locations/us-central1/operations/operation-1750952069332-6387b4c1c7f8c-1dca187f-a4eff308","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-06-26T15:34:30.403922265Z","target":"projects/synergyx-hub/locations/us-central1/functions/joinSynergyX","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/synergyx-hub/locations/us-central1/functions/joinSynergyX","buildConfig":{"runtime":"nodejs20","entryPoint":"joinSynergyX","source":{"storageSource":{"bucket":"gcf-v2-sources-922102669164-us-central1","object":"joinSynergyX/function-source.zip","generation":"1750952070064116"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/synergyx-hub/serviceAccounts/922102669164-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/synergyx-hub/locations/us-central1/services/joinsynergyx","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"synergyx-hub\",\"storageBucket\":\"synergyx-hub.firebasestorage.app\"}","GCLOUD_PROJECT":"synergyx-hub","EVENTARC_CLOUD_EVENT_SOURCE":"projects/synergyx-hub/locations/us-central1/services/joinSynergyX","FUNCTION_TARGET":"joinSynergyX","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"922102669164-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"6e95b1818b4df68f5f47f1519a7c441e0d129764"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2025-06-26T15:34:34.764Z] [create-default-us-central1-joinSynergyX] Retrying task index 0
+[debug] [2025-06-26T15:34:34.797Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:34.798Z] Checked if tokens are valid: true, expires at: 1750954797180
+[debug] [2025-06-26T15:34:34.801Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/synergyx-hub/locations/us-central1/operations/operation-1750952069332-6387b4c1c7f8c-1dca187f-a4eff308 [none]
+[debug] [2025-06-26T15:34:36.472Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/synergyx-hub/locations/us-central1/operations/operation-1750952069332-6387b4c1c7f8c-1dca187f-a4eff308 200
+[debug] [2025-06-26T15:34:36.472Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/synergyx-hub/locations/us-central1/operations/operation-1750952069332-6387b4c1c7f8c-1dca187f-a4eff308 {"name":"projects/synergyx-hub/locations/us-central1/operations/operation-1750952069332-6387b4c1c7f8c-1dca187f-a4eff308","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2025-06-26T15:34:30.403922265Z","target":"projects/synergyx-hub/locations/us-central1/functions/joinSynergyX","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/synergyx-hub/locations/us-central1/functions/joinSynergyX","buildConfig":{"runtime":"nodejs20","entryPoint":"joinSynergyX","source":{"storageSource":{"bucket":"gcf-v2-sources-922102669164-us-central1","object":"joinSynergyX/function-source.zip","generation":"1750952070064116"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/synergyx-hub/serviceAccounts/922102669164-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/synergyx-hub/locations/us-central1/services/joinsynergyx","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"synergyx-hub\",\"storageBucket\":\"synergyx-hub.firebasestorage.app\"}","GCLOUD_PROJECT":"synergyx-hub","EVENTARC_CLOUD_EVENT_SOURCE":"projects/synergyx-hub/locations/us-central1/services/joinSynergyX","FUNCTION_TARGET":"joinSynergyX","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"922102669164-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"6e95b1818b4df68f5f47f1519a7c441e0d129764"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2025-06-26T16:12:06.258Z] [create-default-us-central1-joinSynergyX] Retrying task index 0
+[debug] [2025-06-26T16:12:06.259Z] Checked if tokens are valid: false, expires at: 1750954797180
+[debug] [2025-06-26T16:12:06.259Z] Checked if tokens are valid: false, expires at: 1750954797180
+[debug] [2025-06-26T16:12:06.261Z] > refreshing access token with scopes: []
+[debug] [2025-06-26T16:12:06.318Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-06-26T16:12:06.430Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] Task index 0 failed: timed out after 1500000ms.
+[error] Task index 0 failed: timed out after 1500000ms.
+[debug] [2025-06-26T16:12:07.916Z] Total Function Deployment time: 2259417
+[debug] [2025-06-26T16:12:07.918Z] 1 Functions Deployed
+[debug] [2025-06-26T16:12:07.922Z] 1 Functions Errored
+[debug] [2025-06-26T16:12:07.922Z] 0 Function Deployments Aborted
+[debug] [2025-06-26T16:12:07.922Z] Average Function Deployment time: 2259413
+[debug] [2025-06-26T16:12:08.090Z] *** [apiv2] error from fetch(https://www.googleapis.com/oauth2/v3/token, {"headers":{},"method":"POST","body":{"_overheadLength":545,"_valueLength":212,"_valuesToMeasure":[],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":true,"_streams":[],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------436136558756450170579208","_events":{},"_eventsCount":1}}): FetchError: request to https://www.googleapis.com/oauth2/v3/token failed, reason: getaddrinfo ENOTFOUND www.googleapis.com
+[error] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[info] 
+[info] Functions deploy had errors with the following functions:
+	joinSynergyX(us-central1)
+[debug] [2025-06-26T16:12:08.975Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[debug] [2025-06-26T16:12:09.099Z] Checked if tokens are valid: false, expires at: 1750954797180
+[debug] [2025-06-26T16:12:09.233Z] Checked if tokens are valid: false, expires at: 1750954797180
+[debug] [2025-06-26T16:12:09.234Z] > refreshing access token with scopes: []
+[debug] [2025-06-26T16:12:09.235Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-06-26T16:12:09.235Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-06-26T16:12:09.565Z] *** [apiv2] error from fetch(https://www.googleapis.com/oauth2/v3/token, {"headers":{},"method":"POST","body":{"_overheadLength":545,"_valueLength":212,"_valuesToMeasure":[],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":true,"_streams":[],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------780701746283055855514294","_events":{},"_eventsCount":1}}): FetchError: request to https://www.googleapis.com/oauth2/v3/token failed, reason: getaddrinfo ENOTFOUND www.googleapis.com
+[error] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2025-06-26T16:12:09.693Z] Failed to check artifact cleanup policy for region us-central1: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci {"name":"FirebaseError","children":[],"exit":1,"message":"Authentication Error: Your credentials are no longer valid. Please run \u001b[1mfirebase login --reauth\u001b[22m\n\nFor CI servers and headless environments, generate a new token with \u001b[1mfirebase login:ci\u001b[22m","status":500}
+[debug] [2025-06-26T16:12:09.745Z] Functions deploy failed.
+[debug] [2025-06-26T16:12:09.745Z] {
+  "endpoint": {
+    "id": "joinSynergyX",
+    "project": "synergyx-hub",
+    "region": "us-central1",
+    "entryPoint": "joinSynergyX",
+    "platform": "gcfv2",
+    "runtime": "nodejs20",
+    "httpsTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "serviceAccount": null,
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"synergyx-hub\",\"storageBucket\":\"synergyx-hub.firebasestorage.app\"}",
+      "GCLOUD_PROJECT": "synergyx-hub",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/synergyx-hub/locations/us-central1/services/joinSynergyX"
+    },
+    "codebase": "default",
+    "cpu": 1,
+    "targetedByOnly": false,
+    "hash": "6e95b1818b4df68f5f47f1519a7c441e0d129764"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "exit": 1,
+    "message": "Task index 0 failed: timed out after 1500000ms.",
+    "status": 500,
+    "level": "debug",
+    "code": 500
+  }
+}
+[debug] [2025-06-26T16:15:32.061Z] Error: Failed to create function joinSynergyX in region us-central1
+    at C:\Users\tashu\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:294:27
+    at async Fabricator.createV2Function (C:\Users\tashu\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:278:30)
+    at async Fabricator.createEndpoint (C:\Users\tashu\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:137:13)
+    at async handle (C:\Users\tashu\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:89:17)
+[error] 
+[error] Error: There was an error deploying functions

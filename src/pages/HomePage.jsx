@@ -95,7 +95,7 @@ const HomePage = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link to="/waitlist">
+              <Link to="/signup">
                 <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold px-8 py-4 text-lg neon-glow">
                   Join SynergyX <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
@@ -294,7 +294,7 @@ const HomePage = () => {
               Join thousands of Gen Z learners, creators, and innovators who are already 
               building their dream careers on SynergyX.
             </p>
-            <Link to="/waitlist">
+            <Link to="/signup">
               <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold px-12 py-4 text-xl neon-glow">
                 Get Early Access <ArrowRight className="ml-3 w-6 h-6" />
               </Button>

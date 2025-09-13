@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -66,7 +65,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             >
               {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </Button>
-            <Link to="/waitlist">
+            <Link to="/signup">
               <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold px-6 neon-glow">
                 Join SynergyX
               </Button>
@@ -117,7 +116,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               >
                 {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
               </Button>
-              <Link to="/waitlist" onClick={() => setIsOpen(false)}>
+              <Link to="/signup" onClick={() => setIsOpen(false)}>
                 <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold px-6">
                   Join SynergyX
                 </Button>
